@@ -1,17 +1,35 @@
 package com.zhanghao.androiddemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindString;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class FirstActivity extends AppCompatActivity {
+
+    @BindView(R.id.button_1)
+    Button button1;
+
+    @BindString(R.string.button_1) String btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+        ButterKnife.bind(this);
+    }
+
+    @OnClick(R.id.button_1)
+    void methodForButton() {
+        Toast.makeText(this, "You clicked " + btn1, Toast.LENGTH_SHORT).show();
     }
 
     @Override
