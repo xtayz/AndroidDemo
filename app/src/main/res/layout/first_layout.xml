@@ -7,7 +7,35 @@
         android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_1"
+        android:text="显式Intent"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式Intent"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开网页"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拨打电话"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生命周期"
         android:textAllCaps="false" />
 
 </LinearLayout>
