@@ -24,9 +24,11 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
-        TextView tv = (TextView) findViewById(R.id.tv_1);
-        tv.setText(data);
-        Log.d(TAG, data);
+        if (data != null) {
+            TextView tv = (TextView) findViewById(R.id.tv_1);
+            tv.setText(data);
+            Log.d(TAG, data);
+        }
     }
 
     @OnClick(R.id.btn_1)

@@ -8,18 +8,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chapter2.FirstActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".chapter2.FirstActivity" />
         <activity android:name=".chapter1.HelloWorldActivity" />
         <activity android:name=".chapter2.SecondActivity">
             <intent-filter>
                 <action android:name="com.zhanghao.androiddemo.ACTION_START" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.emample.androiddemo.MY_CATEGORY" />
             </intent-filter>
@@ -37,8 +30,15 @@
         </activity>
         <activity android:name=".chapter2.LifeCycleTestActivity" />
         <activity android:name=".chapter2.NormalActivity" />
-        <activity android:name=".chapter2.DialogActivity"
-            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+        <activity
+            android:name=".chapter2.DialogActivity"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity android:name=".chapter3.ListViewTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
