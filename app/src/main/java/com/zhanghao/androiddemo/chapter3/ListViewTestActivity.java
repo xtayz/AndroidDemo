@@ -52,6 +52,7 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("Activity", R.mipmap.ic_launcher, FirstActivity.class));
         chapters.add(new Chapter("Custom Top Bar", R.mipmap.ic_launcher, CustomTopBarActivity.class));
         chapters.add(new Chapter("RecyclerView", R.mipmap.ic_launcher, RecyclerViewTest.class));
+        chapters.add(new Chapter("UIBestPractice", R.mipmap.ic_launcher, UIBestPractice.class));
     }
 
 }

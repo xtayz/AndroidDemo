@@ -42,7 +42,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".chapter3.CustomTopBarActivity" />
-        <activity android:name=".chapter3.RecyclerViewTest"></activity>
+        <activity android:name=".chapter3.RecyclerViewTest" />
+        <activity android:name=".chapter3.UIBestPractice"></activity>
     </application>
 
 </manifest>
