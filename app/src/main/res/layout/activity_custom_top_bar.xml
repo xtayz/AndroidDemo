@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_custom_top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhanghao.androiddemo.chapter3.CustomTopBarActivity">
+
+    <com.zhanghao.androiddemo.chapter3.CustomTopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.zhanghao.androiddemo.chapter3.CustomTopBar>
+
+</RelativeLayout>

@@ -50,6 +50,8 @@ public class ListViewTestActivity extends AppCompatActivity {
     private void initChapters() {
         chapters.add(new Chapter("Hello World", R.mipmap.ic_launcher, HelloWorldActivity.class));
         chapters.add(new Chapter("Activity", R.mipmap.ic_launcher, FirstActivity.class));
+        chapters.add(new Chapter("Custom Top Bar", R.mipmap.ic_launcher, CustomTopBarActivity.class));
+        chapters.add(new Chapter("RecyclerView", R.mipmap.ic_launcher, RecyclerViewTest.class));
     }
 
 }

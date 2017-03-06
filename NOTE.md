@@ -45,4 +45,9 @@ startActivity(intent);
 在 Run -> Edit Configurations 中的 Deployment Target Options 栏目下，取消选中`Use same devices for future launches`后重新运行即可
 
 ## android.support.constraint.ConstraintLayout是什么
-新创建的EmptyActivity默认都是这个Layout
+类似iOS的Storyboard，通过设置约束来实现复杂的页面布局
+
+## android.widget.LinearLayout 与android.support.v7.widget.LinearLayoutCompat 区别 
+The class LinearLayout exists since API level 1, but some APIs were added after that, for example, setShowDividers introduced on API level 11.
+
+So in this case setShowDividers (and it's parameters) should be invoked using LinearLayoutCompat instead LinearLayout if you are targeting a platform with API level below 11.
