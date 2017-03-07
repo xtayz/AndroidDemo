@@ -11,13 +11,9 @@ import android.view.ViewGroup;
 import com.zhanghao.androiddemo.R;
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link AnotherRightFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link AnotherRightFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Created by wonderworld on 2017/3/7.
  */
+
 public class AnotherRightFragment extends Fragment {
 
     @Override
