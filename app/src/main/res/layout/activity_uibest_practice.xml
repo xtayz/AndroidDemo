@@ -5,6 +5,7 @@
     android:id="@+id/activity_uibest_practice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context="com.zhanghao.androiddemo.chapter3.UIBestPractice">
 
     <android.support.v7.widget.RecyclerView

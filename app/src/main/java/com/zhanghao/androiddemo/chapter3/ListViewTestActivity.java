@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.zhanghao.androiddemo.R;
 import com.zhanghao.androiddemo.chapter1.HelloWorldActivity;
 import com.zhanghao.androiddemo.chapter2.FirstActivity;
+import com.zhanghao.androiddemo.chapter4.FragmentBestPractice;
+import com.zhanghao.androiddemo.chapter4.FragmentTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +55,8 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("Custom Top Bar", R.mipmap.ic_launcher, CustomTopBarActivity.class));
         chapters.add(new Chapter("RecyclerView", R.mipmap.ic_launcher, RecyclerViewTest.class));
         chapters.add(new Chapter("UIBestPractice", R.mipmap.ic_launcher, UIBestPractice.class));
+        chapters.add(new Chapter("FragmentTest", R.mipmap.ic_launcher, FragmentTest.class));
+        chapters.add(new Chapter("FragmentBestractice", R.mipmap.ic_launcher, FragmentBestPractice.class));
     }
 
 }

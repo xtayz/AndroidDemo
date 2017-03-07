@@ -43,7 +43,10 @@
         </activity>
         <activity android:name=".chapter3.CustomTopBarActivity" />
         <activity android:name=".chapter3.RecyclerViewTest" />
-        <activity android:name=".chapter3.UIBestPractice"></activity>
+        <activity android:name=".chapter3.UIBestPractice" />
+        <activity android:name=".chapter4.FragmentTest" />
+        <activity android:name=".chapter4.FragmentBestPractice" />
+        <activity android:name=".chapter4.NewsContentActivity"></activity>
     </application>
 
 </manifest>

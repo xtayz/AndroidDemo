@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_news_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhanghao.androiddemo.chapter4.NewsContentActivity">
+
+    <fragment
+        android:id="@+id/news_content_fragment"
+        android:name="com.zhanghao.androiddemo.chapter4.NewsContentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
