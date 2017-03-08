@@ -15,4 +15,20 @@
         android:gravity="center"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/send"
+        android:textSize="20sp"
+        android:text="send my broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/send_local_broadcast"
+        android:textSize="20sp"
+        android:text="send my local broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
 </LinearLayout>
