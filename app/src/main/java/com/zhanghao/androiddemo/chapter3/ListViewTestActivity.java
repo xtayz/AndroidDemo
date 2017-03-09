@@ -17,6 +17,7 @@ import com.zhanghao.androiddemo.chapter4.FragmentTest;
 import com.zhanghao.androiddemo.chapter5.BroadcastTest;
 import com.zhanghao.androiddemo.chapter5.LoginActivity;
 import com.zhanghao.androiddemo.chapter6.FilePersistenceTest;
+import com.zhanghao.androiddemo.chapter6.SharedPreferencesTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +64,7 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("Broadcast Test", R.mipmap.ic_launcher, BroadcastTest.class));
         chapters.add(new Chapter("BroadcastBestPractice", R.mipmap.ic_launcher, LoginActivity.class));
         chapters.add(new Chapter("FilePersistenceTest", R.mipmap.ic_launcher, FilePersistenceTest.class));
+        chapters.add(new Chapter("SharedPreferencesTest", R.mipmap.ic_launcher, SharedPreferencesTest.class));
     }
 
 }

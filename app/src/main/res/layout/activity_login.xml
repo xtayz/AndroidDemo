@@ -39,7 +39,6 @@
                 android:id="@+id/account"
                 android:hint="admin"
                 android:textSize="20sp"
-                android:text="admin"
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
@@ -67,7 +66,6 @@
                 android:id="@+id/password"
                 android:hint="123456"
                 android:textSize="20sp"
-                android:text="123456"
                 android:inputType="textPassword"
                 android:layout_weight="1"
                 android:layout_gravity="center"
@@ -75,6 +73,12 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/remember_pass"
+            android:text="Remember password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/login"
