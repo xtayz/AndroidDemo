@@ -73,7 +73,8 @@
         <activity android:name=".chapter5.BroadcastBestPractice" />
         <activity android:name=".chapter5.LoginActivity" />
         <activity android:name=".chapter6.FilePersistenceTest" />
-        <activity android:name=".chapter6.SharedPreferencesTest"></activity>
+        <activity android:name=".chapter6.SharedPreferencesTest" />
+        <activity android:name=".chapter6.DatabaseTest"></activity>
     </application>
 
 </manifest>
