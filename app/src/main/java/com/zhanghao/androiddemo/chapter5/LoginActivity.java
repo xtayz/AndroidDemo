@@ -12,7 +12,7 @@ import com.zhanghao.androiddemo.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity1 {
 
     @BindView(R.id.account)
     EditText accountEdit;

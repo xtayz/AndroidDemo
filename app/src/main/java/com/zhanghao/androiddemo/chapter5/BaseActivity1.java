@@ -15,8 +15,8 @@ import com.zhanghao.androiddemo.base.BaseActivity;
 public class BaseActivity1 extends BaseActivity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         ActivityController.addActivity(this);
     }
 
