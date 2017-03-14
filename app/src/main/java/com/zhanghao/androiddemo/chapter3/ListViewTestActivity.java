@@ -21,6 +21,7 @@ import com.zhanghao.androiddemo.chapter6.FilePersistenceTest;
 import com.zhanghao.androiddemo.chapter6.MyDatabaseHelper;
 import com.zhanghao.androiddemo.chapter6.SharedPreferencesTest;
 import com.zhanghao.androiddemo.chapter7.ContactsTest;
+import com.zhanghao.androiddemo.chapter7.ProviderTest;
 import com.zhanghao.androiddemo.chapter7.RuntimePermissionTest;
 
 import java.util.ArrayList;
@@ -72,6 +73,7 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("DatabaseTest", R.mipmap.ic_launcher, DatabaseTest.class));
         chapters.add(new Chapter("RuntimePermissionTest", R.mipmap.ic_launcher, RuntimePermissionTest.class));
         chapters.add(new Chapter("ContactsTest", R.mipmap.ic_launcher, ContactsTest.class));
+        chapters.add(new Chapter("ProviderTest", R.mipmap.ic_launcher, ProviderTest.class));
     }
 
 }

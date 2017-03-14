@@ -14,6 +14,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+            android:name=".chapter7.MyProvider"
+            android:authorities="com.zhanghao.androiddemo.provider"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity android:name=".chapter2.FirstActivity" />
         <activity android:name=".chapter1.HelloWorldActivity" />
         <activity android:name=".chapter2.SecondActivity">
@@ -78,7 +84,8 @@
         <activity android:name=".chapter6.SharedPreferencesTest" />
         <activity android:name=".chapter6.DatabaseTest" />
         <activity android:name=".chapter7.RuntimePermissionTest" />
-        <activity android:name=".chapter7.ContactsTest"></activity>
+        <activity android:name=".chapter7.ContactsTest" />
+        <activity android:name=".chapter7.ProviderTest"></activity>
     </application>
 
 </manifest>
