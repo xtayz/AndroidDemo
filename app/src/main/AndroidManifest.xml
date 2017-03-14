@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -85,7 +86,10 @@
         <activity android:name=".chapter6.DatabaseTest" />
         <activity android:name=".chapter7.RuntimePermissionTest" />
         <activity android:name=".chapter7.ContactsTest" />
-        <activity android:name=".chapter7.ProviderTest"></activity>
+        <activity android:name=".chapter7.ProviderTest" />
+        <activity android:name=".chapter8.NotificationTest" />
+        <activity android:name=".chapter8.NotificationActivity" />
+        <activity android:name=".chapter8.CameraAlbumTest"></activity>
     </application>
 
 </manifest>

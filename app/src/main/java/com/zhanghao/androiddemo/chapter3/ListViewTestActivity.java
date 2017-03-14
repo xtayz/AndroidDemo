@@ -23,6 +23,8 @@ import com.zhanghao.androiddemo.chapter6.SharedPreferencesTest;
 import com.zhanghao.androiddemo.chapter7.ContactsTest;
 import com.zhanghao.androiddemo.chapter7.ProviderTest;
 import com.zhanghao.androiddemo.chapter7.RuntimePermissionTest;
+import com.zhanghao.androiddemo.chapter8.CameraAlbumTest;
+import com.zhanghao.androiddemo.chapter8.NotificationTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +58,7 @@ public class ListViewTestActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        listView.setStackFromBottom(true);
     }
 
     private void initChapters() {
@@ -74,6 +77,8 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("RuntimePermissionTest", R.mipmap.ic_launcher, RuntimePermissionTest.class));
         chapters.add(new Chapter("ContactsTest", R.mipmap.ic_launcher, ContactsTest.class));
         chapters.add(new Chapter("ProviderTest", R.mipmap.ic_launcher, ProviderTest.class));
+        chapters.add(new Chapter("NotificationTest", R.mipmap.ic_launcher, NotificationTest.class));
+        chapters.add(new Chapter("CameraAlbumTest", R.mipmap.ic_launcher, CameraAlbumTest.class));
     }
 
 }
