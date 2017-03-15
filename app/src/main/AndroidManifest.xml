@@ -21,17 +21,14 @@
             android:authorities="com.zhanghao.androiddemo.provider"
             android:enabled="true"
             android:exported="true" />
-
         <provider
-            android:authorities="com.zhanghao.androiddemo.fileprovider"
             android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zhanghao.androiddemo.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-
         </provider>
 
         <activity android:name=".chapter2.FirstActivity" />
@@ -102,7 +99,8 @@
         <activity android:name=".chapter7.ProviderTest" />
         <activity android:name=".chapter8.NotificationTest" />
         <activity android:name=".chapter8.NotificationActivity" />
-        <activity android:name=".chapter8.CameraAlbumTest"></activity>
+        <activity android:name=".chapter8.CameraAlbumTest" />
+        <activity android:name=".chapter8.PlayAudioTest"></activity>
     </application>
 
 </manifest>
