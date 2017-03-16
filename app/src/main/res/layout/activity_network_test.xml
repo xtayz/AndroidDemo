@@ -35,6 +35,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/parse_json1"
+        android:textAllCaps="false"
+        android:text="Parse JSON With JSONObject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/parse_json2"
+        android:textAllCaps="false"
+        android:text="Parse JSON With GJON"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

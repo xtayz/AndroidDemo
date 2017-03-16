@@ -59,7 +59,10 @@ public class XmlContentHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if ("app".equals(localName)) {
-            result.add(String.format("id = %s, name = %s, version = %s", id, name, version));
+            result.add(String.format("id = %s, name = %s, version = %s",
+                    id.toString().trim(),
+                    name.toString().trim(),
+                    version.toString().trim()));
             id.setLength(0);
             name.setLength(0);
             version.setLength(0);
