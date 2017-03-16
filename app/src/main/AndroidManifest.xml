@@ -100,7 +100,8 @@
         <activity android:name=".chapter8.NotificationTest" />
         <activity android:name=".chapter8.NotificationActivity" />
         <activity android:name=".chapter8.CameraAlbumTest" />
-        <activity android:name=".chapter8.PlayAudioTest"></activity>
+        <activity android:name=".chapter8.PlayAudioTest" />
+        <activity android:name=".chapter8.PlayVideoTest"></activity>
     </application>
 
 </manifest>
