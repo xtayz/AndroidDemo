@@ -21,6 +21,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/parse_xml1"
+        android:textAllCaps="false"
+        android:text="Parse XML With Pull"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/parse_xml2"
+        android:textAllCaps="false"
+        android:text="Parse XML With SAX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

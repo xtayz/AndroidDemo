@@ -18,7 +18,6 @@ import com.zhanghao.androiddemo.chapter5.BroadcastTest;
 import com.zhanghao.androiddemo.chapter5.LoginActivity;
 import com.zhanghao.androiddemo.chapter6.DatabaseTest;
 import com.zhanghao.androiddemo.chapter6.FilePersistenceTest;
-import com.zhanghao.androiddemo.chapter6.MyDatabaseHelper;
 import com.zhanghao.androiddemo.chapter6.SharedPreferencesTest;
 import com.zhanghao.androiddemo.chapter7.ContactsTest;
 import com.zhanghao.androiddemo.chapter7.ProviderTest;
@@ -40,10 +39,32 @@ public class ListViewTestActivity extends AppCompatActivity {
 
     @BindView(R.id.listView)
     ListView listView;
-
     List<Chapter> chapters = new ArrayList<>();
 
-    ArrayList<Class> mClassList = new ArrayList();
+    private Class[] mClassList = {
+            HelloWorldActivity.class,
+            HelloWorldActivity.class,
+            FirstActivity.class,
+            CustomTopBarActivity.class,
+            RecyclerViewTest.class,
+            UIBestPractice.class,
+            FragmentTest.class,
+            FragmentBestPractice.class,
+            BroadcastTest.class,
+            LoginActivity.class,
+            FilePersistenceTest.class,
+            SharedPreferencesTest.class,
+            DatabaseTest.class,
+            RuntimePermissionTest.class,
+            ContactsTest.class,
+            ProviderTest.class,
+            NotificationTest.class,
+            CameraAlbumTest.class,
+            PlayAudioTest.class,
+            PlayVideoTest.class,
+            WebViewTest.class,
+            NetworkTest.class,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,33 +89,9 @@ public class ListViewTestActivity extends AppCompatActivity {
     }
 
     private void initChapters() {
-
-        mClassList.add(HelloWorldActivity.class);
-        mClassList.add(FirstActivity.class);
-        mClassList.add(CustomTopBarActivity.class);
-        mClassList.add(RecyclerViewTest.class);
-        mClassList.add(UIBestPractice.class);
-        mClassList.add(FragmentTest.class);
-        mClassList.add(FragmentBestPractice.class);
-        mClassList.add(BroadcastTest.class);
-        mClassList.add(LoginActivity.class);
-        mClassList.add(FilePersistenceTest.class);
-        mClassList.add(SharedPreferencesTest.class);
-        mClassList.add(DatabaseTest.class);
-        mClassList.add(RuntimePermissionTest.class);
-        mClassList.add(ContactsTest.class);
-        mClassList.add(ProviderTest.class);
-        mClassList.add(NotificationTest.class);
-        mClassList.add(CameraAlbumTest.class);
-        mClassList.add(PlayAudioTest.class);
-        mClassList.add(PlayVideoTest.class);
-        mClassList.add(WebViewTest.class);
-        mClassList.add(NetworkTest.class);
-
         for (Class c: mClassList) {
             chapters.add(new Chapter(c.getSimpleName(), R.mipmap.ic_launcher, c));
         }
-
     }
 
 }

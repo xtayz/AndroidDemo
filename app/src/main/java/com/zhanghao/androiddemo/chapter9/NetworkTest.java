@@ -5,14 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zhanghao.androiddemo.R;
 import com.zhanghao.androiddemo.base.BaseActivity;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -27,13 +32,32 @@ public class NetworkTest extends BaseActivity {
     @BindView(R.id.response_text)
     TextView responseText;
 
+    private String xmlData =
+            "<apps> \n" +
+            "  <app> \n" +
+            "    <id>1</id>  \n" +
+            "    <name>Google Maps</name>  \n" +
+            "    <version>1.0</version> \n" +
+            "  </app>  \n" +
+            "  <app> \n" +
+            "    <id>2</id>  \n" +
+            "    <name>Chrome</name>  \n" +
+            "    <version>2.0</version> \n" +
+            "  </app>  \n" +
+            "  <app> \n" +
+            "    <id>3</id>  \n" +
+            "    <name>Google Play</name>  \n" +
+            "    <version>3.0</version> \n" +
+            "  </app> \n" +
+            "</apps>";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_network_test);
     }
 
-    @OnClick({ R.id.send_request1, R.id.send_request2 }) void onClickedButton(View v) {
+    @OnClick({ R.id.send_request1, R.id.send_request2, R.id.parse_xml1, R.id.parse_xml2 }) void onClickedButton(View v) {
         switch (v.getId()) {
             case R.id.send_request1:
                 sendRequestWithHttpURLConnection();
@@ -41,8 +65,56 @@ public class NetworkTest extends BaseActivity {
             case R.id.send_request2:
                 sendRequestWithOkHttp();
                 break;
+            case R.id.parse_xml1:
+                parseXMLWithPull(xmlData);
+                break;
+            case R.id.parse_xml2:
+                parseXMLWithSAX(xmlData);
+                break;
             default:
                 break;
+        }
+    }
+
+    private void parseXMLWithSAX(String xmlData) {
+
+    }
+
+    private void parseXMLWithPull(String xmlData) {
+        try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            XmlPullParser xmlPullParser = factory.newPullParser();
+            xmlPullParser.setInput(new StringReader(xmlData));
+            int eventType = xmlPullParser.getEventType();
+            String id = "";
+            String name = "";
+            String version = "";
+            String result = "";
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String nodeName = xmlPullParser.getName();
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        if ("id".equals(nodeName)) {
+                            id = xmlPullParser.nextText();
+                        } else if ("name".equals(nodeName)) {
+                            name = xmlPullParser.nextText();
+                        } else if ("version".equals(nodeName)) {
+                            version = xmlPullParser.nextText();
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if ("app".equals(nodeName)) {
+                            result += String.format("id = %s, name = %s, version = %s\n", id, name, version);
+                        }
+                        showResponse(result);
+                        break;
+                    default:
+                        break;
+                }
+                eventType = xmlPullParser.next();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
