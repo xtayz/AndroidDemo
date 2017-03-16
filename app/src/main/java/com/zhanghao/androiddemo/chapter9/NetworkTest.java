@@ -1,15 +1,14 @@
 package com.zhanghao.androiddemo.chapter9;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zhanghao.androiddemo.R;
 import com.zhanghao.androiddemo.base.BaseActivity;
 
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -20,6 +19,8 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import javax.xml.parsers.SAXParserFactory;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -77,7 +78,16 @@ public class NetworkTest extends BaseActivity {
     }
 
     private void parseXMLWithSAX(String xmlData) {
-
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            XMLReader xmlReader = factory.newSAXParser().getXMLReader();
+            XmlContentHandler handler = new XmlContentHandler();
+            xmlReader.setContentHandler(handler);
+            xmlReader.parse(new InputSource(new StringReader(xmlData)));
+//            showResponse(handler.getResult());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void parseXMLWithPull(String xmlData) {

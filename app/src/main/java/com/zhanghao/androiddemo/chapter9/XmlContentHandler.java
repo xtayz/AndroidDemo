@@ -12,7 +12,7 @@ import java.util.List;
  * Created by wonderworld on 2017/3/16.
  */
 
-public class XmlContentHandle extends DefaultHandler {
+public class XmlContentHandler extends DefaultHandler {
 
     private String nodeName;
     private StringBuilder id;
@@ -20,6 +20,11 @@ public class XmlContentHandle extends DefaultHandler {
     private StringBuilder version;
 
     private List<String> result = new ArrayList<>();
+
+    public List<String> getResult() {
+        return result;
+    }
+
 
     @Override
     public void startDocument() throws SAXException {
