@@ -27,6 +27,7 @@ import com.zhanghao.androiddemo.chapter8.CameraAlbumTest;
 import com.zhanghao.androiddemo.chapter8.NotificationTest;
 import com.zhanghao.androiddemo.chapter8.PlayAudioTest;
 import com.zhanghao.androiddemo.chapter8.PlayVideoTest;
+import com.zhanghao.androiddemo.chapter9.NetworkTest;
 import com.zhanghao.androiddemo.chapter9.WebViewTest;
 
 import java.util.ArrayList;
@@ -42,6 +43,8 @@ public class ListViewTestActivity extends AppCompatActivity {
 
     List<Chapter> chapters = new ArrayList<>();
 
+    ArrayList<Class> mClassList = new ArrayList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +59,7 @@ public class ListViewTestActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Chapter item = ListViewTestActivity.this.chapters.get(position);
-                Toast.makeText(ListViewTestActivity.this, item.getName(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(ListViewTestActivity.this, item.getName(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ListViewTestActivity.this, item.getaClass());
                 startActivity(intent);
             }
@@ -65,26 +68,33 @@ public class ListViewTestActivity extends AppCompatActivity {
     }
 
     private void initChapters() {
-        chapters.add(new Chapter("Hello World", R.mipmap.ic_launcher, HelloWorldActivity.class));
-        chapters.add(new Chapter("Activity", R.mipmap.ic_launcher, FirstActivity.class));
-        chapters.add(new Chapter("Custom Top Bar", R.mipmap.ic_launcher, CustomTopBarActivity.class));
-        chapters.add(new Chapter("RecyclerView", R.mipmap.ic_launcher, RecyclerViewTest.class));
-        chapters.add(new Chapter("UIBestPractice", R.mipmap.ic_launcher, UIBestPractice.class));
-        chapters.add(new Chapter("FragmentTest", R.mipmap.ic_launcher, FragmentTest.class));
-        chapters.add(new Chapter("FragmentBestractice", R.mipmap.ic_launcher, FragmentBestPractice.class));
-        chapters.add(new Chapter("Broadcast Test", R.mipmap.ic_launcher, BroadcastTest.class));
-        chapters.add(new Chapter("BroadcastBestPractice", R.mipmap.ic_launcher, LoginActivity.class));
-        chapters.add(new Chapter("FilePersistenceTest", R.mipmap.ic_launcher, FilePersistenceTest.class));
-        chapters.add(new Chapter("SharedPreferencesTest", R.mipmap.ic_launcher, SharedPreferencesTest.class));
-        chapters.add(new Chapter("DatabaseTest", R.mipmap.ic_launcher, DatabaseTest.class));
-        chapters.add(new Chapter("RuntimePermissionTest", R.mipmap.ic_launcher, RuntimePermissionTest.class));
-        chapters.add(new Chapter("ContactsTest", R.mipmap.ic_launcher, ContactsTest.class));
-        chapters.add(new Chapter("ProviderTest", R.mipmap.ic_launcher, ProviderTest.class));
-        chapters.add(new Chapter("NotificationTest", R.mipmap.ic_launcher, NotificationTest.class));
-        chapters.add(new Chapter("CameraAlbumTest", R.mipmap.ic_launcher, CameraAlbumTest.class));
-        chapters.add(new Chapter("PlayAudioTest", R.mipmap.ic_launcher, PlayAudioTest.class));
-        chapters.add(new Chapter("PlayVideoTest", R.mipmap.ic_launcher, PlayVideoTest.class));
-        chapters.add(new Chapter("WebViewTest", R.mipmap.ic_launcher, WebViewTest.class));
+
+        mClassList.add(HelloWorldActivity.class);
+        mClassList.add(FirstActivity.class);
+        mClassList.add(CustomTopBarActivity.class);
+        mClassList.add(RecyclerViewTest.class);
+        mClassList.add(UIBestPractice.class);
+        mClassList.add(FragmentTest.class);
+        mClassList.add(FragmentBestPractice.class);
+        mClassList.add(BroadcastTest.class);
+        mClassList.add(LoginActivity.class);
+        mClassList.add(FilePersistenceTest.class);
+        mClassList.add(SharedPreferencesTest.class);
+        mClassList.add(DatabaseTest.class);
+        mClassList.add(RuntimePermissionTest.class);
+        mClassList.add(ContactsTest.class);
+        mClassList.add(ProviderTest.class);
+        mClassList.add(NotificationTest.class);
+        mClassList.add(CameraAlbumTest.class);
+        mClassList.add(PlayAudioTest.class);
+        mClassList.add(PlayVideoTest.class);
+        mClassList.add(WebViewTest.class);
+        mClassList.add(NetworkTest.class);
+
+        for (Class c: mClassList) {
+            chapters.add(new Chapter(c.getSimpleName(), R.mipmap.ic_launcher, c));
+        }
+
     }
 
 }

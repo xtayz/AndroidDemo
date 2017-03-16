@@ -103,7 +103,8 @@
         <activity android:name=".chapter8.CameraAlbumTest" />
         <activity android:name=".chapter8.PlayAudioTest" />
         <activity android:name=".chapter8.PlayVideoTest" />
-        <activity android:name=".chapter9.WebViewTest"></activity>
+        <activity android:name=".chapter9.WebViewTest" />
+        <activity android:name=".chapter9.NetworkTest"></activity>
     </application>
 
 </manifest>
