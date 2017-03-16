@@ -27,6 +27,7 @@ import com.zhanghao.androiddemo.chapter8.CameraAlbumTest;
 import com.zhanghao.androiddemo.chapter8.NotificationTest;
 import com.zhanghao.androiddemo.chapter8.PlayAudioTest;
 import com.zhanghao.androiddemo.chapter8.PlayVideoTest;
+import com.zhanghao.androiddemo.chapter9.WebViewTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +84,7 @@ public class ListViewTestActivity extends AppCompatActivity {
         chapters.add(new Chapter("CameraAlbumTest", R.mipmap.ic_launcher, CameraAlbumTest.class));
         chapters.add(new Chapter("PlayAudioTest", R.mipmap.ic_launcher, PlayAudioTest.class));
         chapters.add(new Chapter("PlayVideoTest", R.mipmap.ic_launcher, PlayVideoTest.class));
+        chapters.add(new Chapter("WebViewTest", R.mipmap.ic_launcher, WebViewTest.class));
     }
 
 }
