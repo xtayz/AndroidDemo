@@ -54,5 +54,8 @@ So in this case setShowDividers (and it's parameters) should be invoked using Li
 
 
 ## SQLiteOpenHelper: getWritableDatabase和getReadableDatabase的区别
-`getWritableDatabase`取得的实例是以读写的方式打开数据库，如果打开的数据库磁盘满了，此时只能读不能写，此时调用了`getWritableDatabase`的实例，那么将会发生错误（异常）
-`getReadableDatabase`取得的实例是先调用`getWritableDatabase`以读写的方式打开数据库，如果数据库的磁盘满了，此时返回打开失败，继而用`getReadableDatabase`的实例以只读的方式去打开数据库
+##### getWritableDatabase
+取得的实例是以读写的方式打开数据库，如果打开的数据库磁盘满了，此时只能读不能写，此时调用了`getWritableDatabase`的实例，那么将会发生错误（异常）
+
+##### getReadableDatabase
+取得的实例是先调用`getWritableDatabase`以读写的方式打开数据库，如果数据库的磁盘满了，此时返回打开失败，继而用`getReadableDatabase`的实例以只读的方式去打开数据库
