@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.zhanghao.androiddemo.R;
 import com.zhanghao.androiddemo.chapter1.HelloWorldActivity;
+import com.zhanghao.androiddemo.chapter10.MoviesActivity;
 import com.zhanghao.androiddemo.chapter2.FirstActivity;
 import com.zhanghao.androiddemo.chapter4.FragmentBestPractice;
 import com.zhanghao.androiddemo.chapter4.FragmentTest;
@@ -64,6 +65,7 @@ public class ListViewTestActivity extends AppCompatActivity {
             PlayVideoTest.class,
             WebViewTest.class,
             NetworkTest.class,
+            MoviesActivity.class,
     };
 
     @Override
