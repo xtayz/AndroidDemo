@@ -3,6 +3,7 @@ package com.zhanghao.androiddemo.chapter10;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
+import retrofit2.Callback;
 import retrofit2.Retrofit;
 
 /**
@@ -24,6 +25,7 @@ public class RequestManager {
 //                .addConverterFactory(ResponseConvertFactory.create())
                 .baseUrl(BASE_URL)
                 .build();
+
     }
 
     private static class SingletonHolder {
@@ -33,6 +35,5 @@ public class RequestManager {
     public static RequestManager getInstance() {
         return SingletonHolder.INSTANCE;
     }
-
 
 }
