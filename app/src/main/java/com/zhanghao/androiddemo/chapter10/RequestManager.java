@@ -3,7 +3,6 @@ package com.zhanghao.androiddemo.chapter10;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
-import retrofit2.Callback;
 import retrofit2.Retrofit;
 
 /**
