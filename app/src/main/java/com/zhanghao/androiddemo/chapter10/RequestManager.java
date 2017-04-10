@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by wonderworld on 2017/3/30.
@@ -13,6 +14,11 @@ public class RequestManager {
 
     public static final String BASE_URL = "https://api.douban.com/";
     public static final int DEFAULT_TIMEOUT = 5;
+
+    public Retrofit getRetrofit() {
+        return retrofit;
+    }
+
     private Retrofit retrofit;
 
     private RequestManager() {
@@ -21,7 +27,7 @@ public class RequestManager {
 
         retrofit = new Retrofit.Builder()
                 .client(builder.build())
-//                .addConverterFactory(ResponseConvertFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
                 .build();
 

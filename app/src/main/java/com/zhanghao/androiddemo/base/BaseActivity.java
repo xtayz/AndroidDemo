@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private static final String TAG = BaseActivity.class.getSimpleName();
+    protected static final String TAG = BaseActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

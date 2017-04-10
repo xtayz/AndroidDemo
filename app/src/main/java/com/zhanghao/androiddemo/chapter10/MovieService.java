@@ -1,5 +1,7 @@
 package com.zhanghao.androiddemo.chapter10;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -9,6 +11,6 @@ import retrofit2.http.Query;
  */
 
 public interface MovieService {
-    @GET("top250")
+    @GET("/v2/movie/top250")
     Call<Result> getTopMovie(@Query("start") int start, @Query("count") int count);
 }
