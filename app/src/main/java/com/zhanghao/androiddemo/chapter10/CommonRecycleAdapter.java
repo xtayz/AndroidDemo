@@ -42,14 +42,6 @@ public abstract class CommonRecycleAdapter<T> extends RecyclerView.Adapter {
         convert((MyViewHolder) holder, mDatas.get(position), position);
     }
 
-    //    @Override
-//    public abstract void onBindViewHolder(RecycleViewHolder holder, int position);
-
-    //    @Override
-//    public void onBindViewHolder(RecycleViewHolder holder, int position) {
-//        convert(holder, mDatas.get(position), position);
-//    }
-//
     public abstract void convert(MyViewHolder holder, T data, int position);
 
     @Override
