@@ -40,5 +40,8 @@ public class RequestManager {
     public static RequestManager getInstance() {
         return SingletonHolder.INSTANCE;
     }
+    public static <T> T createService(final Class<T> service) {
+        return getInstance().getRetrofit().create(service);
+    }
 
 }

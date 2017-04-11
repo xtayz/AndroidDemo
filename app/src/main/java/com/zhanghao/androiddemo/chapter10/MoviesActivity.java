@@ -72,7 +72,7 @@ public class MoviesActivity extends BaseActivity {
 
         lvMovie.setAdapter(mAdapter);
 
-        MovieService movieService = RequestManager.getInstance().getRetrofit().create(MovieService.class);
+        MovieService movieService = RequestManager.createService(MovieService.class);
         Call<Result> topMovieCall = movieService.getTopMovie(0, 20);
 
         topMovieCall.enqueue(new Callback<Result>() {
