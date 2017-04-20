@@ -53,8 +53,7 @@ public class MoviesActivity extends BaseActivity {
                 layoutManager.setOrientation(OrientationHelper.HORIZONTAL);
                 recyclerView.setLayoutManager(layoutManager);
 
-                recyclerView.setAdapter(new CommonRecycleAdapter<Result.SubjectsBean>(MoviesActivity.this, data.getSubjects()) {
-
+                CommonRecycleAdapter adapter = new CommonRecycleAdapter(MoviesActivity.this, data.getSubjects()) {
                     @Override
                     public int getLayoutId(int viewType) {
                         return R.layout.item_movie;
@@ -65,8 +64,23 @@ public class MoviesActivity extends BaseActivity {
                         holder.setText(R.id.tv_title, data.getTitle())
                                 .setImage(R.id.iv_cover, data.getImages().getMedium());
                     }
+                };
+                recyclerView.setAdapter(adapter);
 
-                });
+//                recyclerView.setAdapter(new CommonRecycleAdapter<Result.SubjectsBean>(MoviesActivity.this, data.getSubjects()) {
+//
+//                    @Override
+//                    public int getLayoutId(int viewType) {
+//                        return R.layout.item_movie;
+//                    }
+//
+//                    @Override
+//                    public void convert(MyViewHolder holder, Result.SubjectsBean data, int position) {
+//                        holder.setText(R.id.tv_title, data.getTitle())
+//                                .setImage(R.id.iv_cover, data.getImages().getMedium());
+//                    }
+//
+//                });
             }
         };
 

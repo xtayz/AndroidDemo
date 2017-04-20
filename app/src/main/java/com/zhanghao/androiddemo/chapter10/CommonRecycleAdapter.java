@@ -16,13 +16,13 @@ import java.util.List;
  * Created by wonderworld on 2017/4/10.
  */
 
-public abstract class CommonRecycleAdapter<T> extends RecyclerView.Adapter {
+public abstract class CommonRecycleAdapter extends RecyclerView.Adapter<CommonRecycleAdapter.MyViewHolder> {
 
-    private List<T> mDatas;
+    private List<Result.SubjectsBean> mDatas;
     private Context mContext;
     private LayoutInflater inflater;
 
-    public CommonRecycleAdapter(Context context, List<T> datas) {
+    public CommonRecycleAdapter(Context context, List<Result.SubjectsBean> datas) {
         this.mContext = context;
         this.mDatas = datas;
         inflater = LayoutInflater.from(context);
@@ -37,12 +37,17 @@ public abstract class CommonRecycleAdapter<T> extends RecyclerView.Adapter {
         return holder;
     }
 
+//    @Override
+//    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+//        convert((MyViewHolder) holder, mDatas.get(position), position);
+//    }
+
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        convert((MyViewHolder) holder, mDatas.get(position), position);
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        convert(holder, mDatas.get(position), position);
     }
 
-    public abstract void convert(MyViewHolder holder, T data, int position);
+    public abstract void convert(MyViewHolder holder, Result.SubjectsBean data, int position);
 
     @Override
     public int getItemCount() {
