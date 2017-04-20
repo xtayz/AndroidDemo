@@ -3,6 +3,7 @@ package com.zhanghao.androiddemo.chapter10;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -12,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RequestManager {
 
+    private static final String TAG = "RequestManager";
     public static final String BASE_URL = "https://api.douban.com/";
     public static final int DEFAULT_TIMEOUT = 5;
 
@@ -24,6 +26,10 @@ public class RequestManager {
     private RequestManager() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        builder.addInterceptor(logging);
 
         retrofit = new Retrofit.Builder()
                 .client(builder.build())
