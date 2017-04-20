@@ -1,9 +1,13 @@
 package com.zhanghao.androiddemo.chapter10;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.CallAdapter;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -50,4 +54,11 @@ public class RequestManager {
         return getInstance().getRetrofit().create(service);
     }
 
+    public class ErrorHandlingCallAdapterFactory extends CallAdapter.Factory {
+
+        @Override
+        public CallAdapter<?, ?> get(Type returnType, Annotation[] annotations, Retrofit retrofit) {
+            return null;
+        }
+    }
 }
