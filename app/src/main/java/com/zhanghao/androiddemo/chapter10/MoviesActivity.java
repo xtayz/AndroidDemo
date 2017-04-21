@@ -13,6 +13,7 @@ import com.zhanghao.androiddemo.base.BaseActivity;
 import com.zhanghao.androiddemo.base.CommonAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import retrofit2.Call;
@@ -86,16 +87,10 @@ public class MoviesActivity extends BaseActivity {
 
         lvMovie.setAdapter(mAdapter);
 
-        MovieService movieService = RequestManager.createService(MovieService.class);
-        Call<Result> topMovieCall = movieService.getTopMovie(0, 20);
-
-        topMovieCall.enqueue(new Callback<Result>() {
+        MoviesLoader moviesLoader = new MoviesLoader();
+        moviesLoader.getTopMovie(0, 20, new HttpCallback<Result>() {
             @Override
-            public void onResponse(Call<Result> call, Response<Result> response) {
-                categories.add(response.body());
-                categories.add(response.body());
-                categories.add(response.body());
-                categories.add(response.body());
+            void onSuccess(Call<Result> call, Response<Result> response) {
                 categories.add(response.body());
                 categories.add(response.body());
                 categories.add(response.body());
@@ -106,6 +101,7 @@ public class MoviesActivity extends BaseActivity {
 
             @Override
             public void onFailure(Call<Result> call, Throwable t) {
+                super.onFailure(call, t);
                 Toast.makeText(MoviesActivity.this, "获取数据失败", Toast.LENGTH_SHORT).show();
             }
         });
